@@ -1,6 +1,4 @@
-# linktree
-
-Linktree Rede Social
+# Linktree Rede Social
 
 <h1 align="center"> DevLinks </h1>
 
@@ -33,7 +31,7 @@ Esse projeto foi desenvolvido com as seguintes tecnologias:
 
 O DevLinks é um agregador de links para usar como cartão de visitas online.
 
-- [Acesse o projeto finalizado, online](https://mescena.github.io/linktree/)
+- [Acesse o projeto finalizado, online](https://mescena.github.io/link-social/)
 
 ## :memo: Licença
 
