@@ -1,0 +1,251 @@
+/* inicio reset css */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  line-height: 1;
+  font-size: 100%;
+  font-family: sans-serif;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+input,
+textarea {
+  outline: none;
+}
+/* fim reset css */
+
+/* inicio secao de varivael css */
+:root {
+  /* fonts */
+  --font-one: "Inter", sans-serif;
+
+  /* color */
+  --color-one: #ffffff;
+
+  /* color RGB */
+  --color-bg-one: rgba(225, 225, 255, 0.5);
+  --color-bg-two: rgba(255, 255, 255, 0.05);
+  --color-bg-two-hover: rgba(0, 0, 0, 0.02);
+  --color-bg-tre-hover: rgba(255, 255, 255, 0.2);
+
+  /* background */
+  --bg-url: url(./assets/bg-mobile.jpg);
+  --switch-bg-url: url(./assets/moon-stars.svg);
+}
+.light {
+  --color-one: #000;
+  --bg-url: url(./assets/bg-mobile-light.jpg);
+  --color-two: rgba(0, 0, 0, 0.5);
+  --color-bg-two: rgba(0, 0, 0, 0.05);
+  --color-bg-two-hover: rgba(0, 0, 0, 0.02);
+  --color-bg-tre-hover: rgba(0, 0, 0, 0.1);
+  --switch-bg-url: url(./assets/sun.svg);
+}
+/* fim secao de varivael css */
+
+/* inicio estilo profile */
+body {
+  /* background: color image repeat position/size */
+  background: var(--bg-url) no-repeat top center/cover;
+}
+
+#container {
+  width: 100%;
+  max-width: 588px;
+  margin: 56px auto 0;
+  padding: 0 24px;
+}
+
+#profile {
+  width: 100%;
+  text-align: center;
+  padding: 0 0 24px 0;
+}
+
+#profile img {
+  width: 112px;
+  height: 112px;
+  object-fit: cover;
+
+  border-radius: 100%;
+  border: 2px solid var(--color-one);
+}
+
+#profile h1 {
+  font-family: var(--font-one);
+  color: var(--color-one);
+  font-weight: 500;
+  font-size: 1rem;
+  line-height: 24px;
+
+  padding: 8px 0 0 0;
+}
+
+/* fim estilo profile */
+
+/* inicio estilo botao de action */
+#switch {
+  position: relative;
+  margin: 5px auto;
+  width: 65px;
+}
+
+#switch button {
+  width: 32px;
+  height: 32px;
+  background: #ffffff var(--switch-bg-url) no-repeat center;
+  border: 0;
+  border-radius: 50%;
+
+  position: absolute;
+  top: 50%;
+  left: 0;
+  z-index: 1;
+  transform: translate(0, -50%);
+
+  animation: slide-back 0.4s;
+}
+#switch button:hover {
+  outline: 8px solid #e79be540;
+}
+.light #switch button {
+  animation: slide-in 0.4s forwards;
+}
+#switch span {
+  display: block;
+  width: 64px;
+  height: 24px;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  border-radius: 9999px;
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+}
+.light #switch span {
+  border: 1px solid #0000007d;
+}
+/* fim estilo botao de action */
+
+/* inicio estilo links */
+#navigation__list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 16px 0;
+  padding: 24px 0;
+}
+#navigation__list__item {
+  width: 100%;
+}
+#navigation__list__item a {
+  display: block;
+  padding: 16px 24px;
+  font-family: var(--font-one);
+  font-weight: 500;
+  text-align: center;
+  text-decoration: inherit;
+  color: var(--color-one);
+  background-color: var(--color-bg-two);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  border: 1px solid #ffffff78;
+  border-radius: 8px;
+  transition: background 1s;
+}
+#navigation__list__item a:hover {
+  background-color: var(--color-bg-two-hover);
+  border: 1.5px solid var(--color-one);
+}
+
+/* fim estilo links */
+
+/* inicio estilo midia-social */
+ion-icon {
+  color: var(--color-one);
+  font-size: 24px;
+}
+#midia-social__list__item {
+  display: flex;
+  justify-content: center;
+}
+#midia-social__list__item a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+
+  transition: background 0.2s;
+  border-radius: 50%;
+}
+#midia-social__list__item a:hover {
+  background: var(--color-bg-tre-hover);
+}
+/* fim estilo midia-social */
+
+/* inicio estilo footer */
+
+#footer {
+  padding: 24px 0;
+  text-align: center;
+}
+#footer__title {
+  font-family: var(--font-one);
+  color: var(--color-one);
+  font-weight: 300;
+  font-size: 0.875rem;
+  line-height: 24px;
+}
+#footer__title a {
+  text-decoration: inherit;
+  color: var(--color-one);
+  font-weight: 500;
+}
+
+/* fim estilo footer */
+
+/* animatio */
+
+@keyframes slide-in {
+  from {
+    left: 0;
+  }
+  to {
+    left: 50%;
+  }
+}
+
+@keyframes slide-back {
+  from {
+    left: 50%;
+  }
+  to {
+    left: 0;
+  }
+}
